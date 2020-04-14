@@ -9,6 +9,9 @@
 #include "Level.h"
 #include "Pokitto.h"
 
+#define max2(a,b) ((a)>(b)?(a):(b))
+#define min2(a,b) ((a)<(b)?(a):(b))
+
 /* Auto-generated function declarations */
 void setup();
 void loop();
@@ -239,8 +242,8 @@ void setTile( byte sprite) {
 void nextLevel() {
   if (curLevel < NUM_LEVELS-3) {
     (gamemode == EASY) ? cureasy++ : curhard++;
-    maxeasy = max(maxeasy, cureasy);
-    maxhard = max(maxhard, curhard);
+    maxeasy = max2(maxeasy, cureasy);
+    maxhard = max2(maxhard, curhard);
     curLevel++;
   }
   initWorld(curLevel);

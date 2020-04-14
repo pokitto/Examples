@@ -312,7 +312,6 @@ void setup() {
   gb.display.fontSize = 1;
   gb.display.textWrap = false;
   gb.display.persistence = false;
-  gb.battery.show = false;
   gb.display.setColor(BLACK);
   gb.display.setColorDepth(1);
 
